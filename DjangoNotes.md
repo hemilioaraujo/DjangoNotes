@@ -1,6 +1,19 @@
 PASSOS BÁSICOS DJANGO
 ==================================================
 
+[VENV]
+[Instalar Django]
+[Iniciar projeto]
+[Alterar configurações de settings.py]
+[Testar o servidor]
+[URLS]
+[Views]
+[Models]
+[Django Admin]
+[Templates]
+[Arquivos estáticos]
+[Arquivos de media]
+
 ## VENV
 
 Criar virtual enviroment:
@@ -289,4 +302,11 @@ from django.conf.urls.static import static
  [Instalar Django]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#instalar-django
  [Iniciar projeto]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#iniciar-projeto
  [Alterar configurações de settings.py]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#alterar-configura%C3%A7%C3%B5es-de-settingspy
- [Testar o servidor]: Testar se o servidor
+ [Testar o servidor]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#testar-o-servidor
+ [URLS]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#urls
+ [Views]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#views
+ [Models]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#models
+ [Django Admin]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#django-admin
+ [Templates]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#templates
+ [Arquivos estáticos]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#arquivos-est%C3%A1ticos
+ [Arquivos de media]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#arquivos-de-media
