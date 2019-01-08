@@ -1,6 +1,16 @@
 PASSOS BÁSICOS DJANGO
 ==================================================
 
+```python
+s = "Python syntax highlighting"
+print s
+```
+
+
+```shell
+pip install django
+```
+
 ### VENV
 
     * Criar virtual enviroment:
@@ -9,7 +19,7 @@ PASSOS BÁSICOS DJANGO
     
     * Ativar venv no linux:
     
-        ```python
+        ```
         source <nome_do_projeto>/bin/activate
         ```
         
