@@ -241,7 +241,7 @@ Adicionar o seguinte código em settings.py:
 STATICFILES_DIRS = ['<nome que quiser>']
 ```
 
-Criar o diretório no diretório raiz do projeto e adicionar os arquivos estáticos nele.
+Criar o diretório na raiz do projeto e adicionar os arquivos estáticos nele.
 
 Carregue os arquivos estáticos nos templates ou qualquer html:
 
@@ -249,18 +249,30 @@ Carregue os arquivos estáticos nos templates ou qualquer html:
 #Tem que ser a primeira linha do código
 {% load static %}
 ```
+
+Adicione o link para o arquivo estático no head do arquivo html:
+
+```html
+<link rel="stylesheet" href="{% static 'style.css' %}">
+```
         
 ### Arquivos de media:
 
 ```python
 #Adicionar o campo MEDIA_URL no arquivo settings.py, nela adicionar a variável de media.
+#Começa e termina com barras.
 MEDIA_URL = '/media/'
 
 #Adicinar o campo MEDIA_ROOT, nele adicionar o nome do diretório onde ficarão os arquivos de mídia.
-MEDIA_ROOT = 'media'
+MEDIA_ROOT = '<o nome que quiser>'
 ```
+Criar o diretório na raiz do projeto.
 
-Criar o diretório no diretório raiz do projeto.
+Na classe dentro de models deve conter o field para imagem passando como arqumento o nome do diretório:
+
+```python
+photo = models.ImageField(upload_to='fotos_produtos', null=True, blank=True)
+```
 
 Para conseguir exibir os arquivos de mídia será necessário adicionar algumas classes em urls.py:
 
