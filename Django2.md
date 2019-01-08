@@ -1,59 +1,69 @@
 PASSOS BÁSICOS DJANGO
 ==================================================
 
-```python
-s = "Python syntax highlighting"
-print s
+### VENV
+
+    * Criar virtual enviroment:
+    
+```shell
+python3 -m venv <nome_do_projeto>
+```
+    
+    * Ativar venv no linux:
+    
+```shell
+source <nome_do_projeto>/bin/activate
 ```
 
+        ou
+
+```shell
+. <nome_do_projeto>/bin/activate>
+```
+    
+    * Ativar venv no windows:
+    
+```shell
+cd venv/Scripts
+```
+
+```shell
+activate
+```
+        
+### Instalar django:
 
 ```shell
 pip install django
 ```
 
-### VENV
-
-    * Criar virtual enviroment:
-    
-        ```python3 -m venv <nome_do_projeto>```
-    
-    * Ativar venv no linux:
-    
-        ```
-        source <nome_do_projeto>/bin/activate
-        ```
-        
-        ou
-        
-        ```. <nome_do_projeto>/bin/activate>```
-    
-    * Ativar venv no windows:
-    
-        ```> cd venv/Scripts```
-        
-        ```> activate```
-        
-### Instalar django:
-
-    ```pip install django```
-
 ### Iniciar projeto:
 
-    ```django-admin startproject <nome do projeto> .```
+```shell
+django-admin startproject <nome do projeto> .
+```
 
 ### Alterar configurações de settings.py:
 
-    ```LANGUAGE_CODE = 'pt-br'```
-    
-    ```TIME_ZONE = 'America/Sao_Paulo'```
+```python
+LANGUAGE_CODE = 'pt-br'
+```
+
+```python
+TIME_ZONE = 'America/Sao_Paulo'
+```
 
 ### Testar se o servidor irá rodar:
 
-    ```python manage.py runserver```
+```shell
+python manage.py runserver
+```
 
 ### Criar urls:
     
-    ```path('url/<argumento>/', <função ou view>)```
+```python
+path('url/<argumento>/', <função ou view>)
+```
     
     > <b>Url</b> é o destino a ser digitado no navegador
     >
@@ -63,12 +73,16 @@ pip install django
 
     É possível extrair urls de uma app, basta incluir a classe include e seu arquivo urls.py da aplicação no arquivo urls.py do seu projeto:
     
-        ```from django.urls import include```<\ br>
-        ```from <app> import urls as <app>_urls```
+```python
+from django.urls import include
+from <app> import urls as <app>_urls
+```
         
     E criar um path que levará para as urls da aplicação:
     
-        ```path('exemplo/',include(<app>_urls))```
+```python
+path('exemplo/',include(<app>_urls))
+```
 
     Necessário importar:
     
