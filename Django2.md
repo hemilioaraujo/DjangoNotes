@@ -9,7 +9,9 @@ PASSOS BÁSICOS DJANGO
     
     * Ativar venv no linux:
     
-        ```source <nome_do_projeto>/bin/activate```
+        ```python
+        source <nome_do_projeto>/bin/activate
+        ```
         
         ou
         
