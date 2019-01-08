@@ -1,23 +1,22 @@
 PASSOS BÁSICOS DJANGO
 ==================================================
 
-[VENV]
-[Instalar Django]
-[Iniciar projeto]
-[Alterar configurações de settings.py]
-[Testar o servidor]
-[URLS]
-[Views]
-[Models]
-[Django Admin]
-[Templates]
-[Arquivos estáticos]
-[Arquivos de media]
+[VENV]  
+[Instalar Django]  
+[Iniciar projeto]  
+[Alterar configurações de settings.py]  
+[Testar o servidor]  
+[URLS]  
+[Views]  
+[Models]  
+[Django Admin]  
+[Templates]  
+[Arquivos estáticos]  
+[Arquivos de media]  
 
 ## VENV
 
-Criar virtual enviroment:
-    
+Criar virtual enviroment:  
 ```shell
 python3 -m venv <nome_do_projeto>
 ```
@@ -78,10 +77,8 @@ python manage.py runserver
 path('url/<argumento>/', <função ou view>)
 ```
 
-**Url:** é o destino a ser digitado no navegador
-
-**Argumento:** no formato <tipo_variável : nome_variável>
-
+**Url:** é o destino a ser digitado no navegador  
+**Argumento:** no formato <tipo_variável : nome_variável>  
 **Função ou view:** sera importada do arquivo view e inserida como argumento de path
 
 É possível extrair urls de uma app, basta incluir a classe include e seu arquivo urls.py da aplicação no arquivo urls.py do seu projeto:
