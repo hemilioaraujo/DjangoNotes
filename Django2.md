@@ -233,33 +233,37 @@ No arquivo .html também é possível utilizar Jinja. Exemplo:
 ``` 
     
 ### Arquivos estáticos:
-    
-    Adicionar a lista STATICFILES_DIRS no arquivo settings.py, nela adicionar os nomes dos diretórios de arquivos estáticos.
-    
-    Criar o diretório no diretório raiz do projeto e adicionar os arquivos estáticos nele.
-    
-    Carregue os arquivos estáticos nos templates ou qualquer html:
-        
-        ```{% load static %}```
+
+Adicionar a lista STATICFILES_DIRS no arquivo settings.py, nela adicionar os nomes dos diretórios de arquivos estáticos.
+
+Criar o diretório no diretório raiz do projeto e adicionar os arquivos estáticos nele.
+
+Carregue os arquivos estáticos nos templates ou qualquer html:
+
+```html
+{% load static %}
+```
         
 ### Arquivos de media:
 
-    Adicionar o campo MEDIA_URL no arquivo settings.py, nela adicionar a variável de media.
-    
-    ```MEDIA_URL = '/media/'```
-    
-    Adicinar o campo MEDIA_ROOT, nele adicionar o nome do diretório onde ficarão os arquivos de mídia.
-    
-    ```MEDIA_ROOT = 'media'```
-    
-    Criar o diretório no diretório raiz do projeto.
-    
-    Para conseguir exibir os arquivos de mídia será necessário adicionar algumas classes em urls.py:
-    
-    ```from django.conf import settings```<br>
-    ```from django.conf.urls.static import static```
-    
-    E adicionar este trecho após as urlpatterns:
-    
-    ``` + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)```
-    
+```python
+#Adicionar o campo MEDIA_URL no arquivo settings.py, nela adicionar a variável de media.
+MEDIA_URL = '/media/'
+
+#Adicinar o campo MEDIA_ROOT, nele adicionar o nome do diretório onde ficarão os arquivos de mídia.
+MEDIA_ROOT = 'media'
+```
+
+Criar o diretório no diretório raiz do projeto.
+
+Para conseguir exibir os arquivos de mídia será necessário adicionar algumas classes em urls.py:
+
+```python
+from django.conf import settings
+from django.conf.urls.static import static
+
+#E adicionar este trecho após as urlpatterns:
+
+ + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+ ```
+
