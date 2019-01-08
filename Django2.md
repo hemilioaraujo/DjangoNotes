@@ -3,19 +3,19 @@ PASSOS BÁSICOS DJANGO
 
 ### VENV
 
-    * Criar virtual enviroment:
+Criar virtual enviroment:
     
 ```shell
 python3 -m venv <nome_do_projeto>
 ```
     
-    * Ativar venv no linux:
+Ativar venv no linux:
     
 ```shell
 source <nome_do_projeto>/bin/activate
 ```
 
-        ou
+ou
 
 ```shell
 . <nome_do_projeto>/bin/activate>
