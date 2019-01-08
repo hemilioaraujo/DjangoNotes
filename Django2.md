@@ -64,14 +64,14 @@ python manage.py runserver
 ```python
 path('url/<argumento>/', <função ou view>)
 ```
-    
-    > **Url:** é o destino a ser digitado no navegador
-    >
-    > **Argumento:** no formato <tipo_variável : nome_variável>
-    >
-    > **Função ou view:** sera importada do arquivo view e inserida como argumento de path
 
-    É possível extrair urls de uma app, basta incluir a classe include e seu arquivo urls.py da aplicação no arquivo urls.py do seu projeto:
+**Url:** é o destino a ser digitado no navegador
+
+**Argumento:** no formato <tipo_variável : nome_variável>
+
+**Função ou view:** sera importada do arquivo view e inserida como argumento de path
+
+É possível extrair urls de uma app, basta incluir a classe include e seu arquivo urls.py da aplicação no arquivo urls.py do seu projeto:
     
 ```python
 from django.urls import include
@@ -98,7 +98,9 @@ path('hello/<str:nome> ', hello)
 ```
     
 ### Views:
-    
+
+Importar a classe HttpResponse:
+
 ```python
 from django.http import HttpResponse
 ```
@@ -188,39 +190,47 @@ admin.site.register(<nome do model>)
 
 ### Templates:
     
-    Criar o  diretório no diretório raiz do projeto.
-    
-    Adicionar o nome do diretório de templates em settings.py -> TEMPLATES -> 'DIRS'
-    
-    Importar a classe render para o arquivo views.py:
-    
-        ```from django.shortcuts import render```
-        
-    Retornar com render:
-    
-        ```return render(request, 'index.html')```
-        
-    Retornar variáveis como argumento de render:
-    
-        v_idade recebe idade e retornada como argumento.
-    
-        ```return render(request, 'pessoa.html', {'v_idade':idade})```
-    
-    No arquivo html, basta adicionar a variável entre  {{}} - chaves duplas. Por exemplo:
-    
-    ```<html>```<br>
-    ```<body>```<br>
-    ```     A idade é: {{ v_idade }}```<br> 
-    ```<\body>```<br>
-    ```<\html>```<br>
-    
-    No arquivo .html também é possível utilizar Jinja. Exemplo:
-    
-    ```{% if v_idade > 0 %}```<br> 
-    ```    A pessoa tem {{ v_idade }} anos.```<br> 
-    ```{% else %}```<br> 
-    ```     Pessoa não encontrada```<br> 
-    ```{% endif %}```<br> 
+Criar o  diretório no diretório raiz do projeto.
+
+Adicionar o nome do diretório de templates em settings.py -> TEMPLATES -> 'DIRS'
+
+```python
+#Importar a classe render para o arquivo views.py
+from django.shortcuts import render
+
+#Retornar com render
+return render(request, 'index.html')
+```
+
+Retornar variáveis como argumento de render:
+
+v_idade recebe idade e é retornada como argumento.
+
+```python
+return render(request, 'pessoa.html', {'v_idade':idade})
+```
+
+No arquivo html, basta adicionar a variável entre  {{}} - chaves duplas.
+
+Por exemplo:
+
+```html
+<html>
+    <body>
+        A idade é: {{ v_idade }}
+    <\body>
+<\html>
+```
+
+No arquivo .html também é possível utilizar Jinja. Exemplo:
+
+```html
+{% if v_idade > 0 %}
+    A pessoa tem {{ v_idade }} anos.
+{% else %}
+    Pessoa não encontrada
+{% endif %}
+``` 
     
 ### Arquivos estáticos:
     
