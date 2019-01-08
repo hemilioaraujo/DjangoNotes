@@ -190,7 +190,7 @@ admin.site.register(<nome do model>)
 
 ### Templates:
     
-Criar o  diretório no diretório raiz do projeto.
+Criar o  diretório na raiz do projeto.
 
 Adicionar o nome do diretório de templates em settings.py -> TEMPLATES -> 'DIRS'
 
@@ -198,8 +198,9 @@ Adicionar o nome do diretório de templates em settings.py -> TEMPLATES -> 'DIRS
 #Importar a classe render para o arquivo views.py
 from django.shortcuts import render
 
-#Retornar com render
-return render(request, 'index.html')
+#Função que retorna o render do template 
+def hello(request):
+    return render(request, 'index.html')
 ```
 
 Retornar variáveis como argumento de render:
@@ -224,7 +225,7 @@ Por exemplo:
 
 No arquivo .html também é possível utilizar Jinja. Exemplo:
 
-```html
+```python
 {% if v_idade > 0 %}
     A pessoa tem {{ v_idade }} anos.
 {% else %}
@@ -234,13 +235,18 @@ No arquivo .html também é possível utilizar Jinja. Exemplo:
     
 ### Arquivos estáticos:
 
-Adicionar a lista STATICFILES_DIRS no arquivo settings.py, nela adicionar os nomes dos diretórios de arquivos estáticos.
+Adicionar o seguinte código em settings.py:
+
+```python
+STATICFILES_DIRS = ['<nome que quiser>']
+```
 
 Criar o diretório no diretório raiz do projeto e adicionar os arquivos estáticos nele.
 
 Carregue os arquivos estáticos nos templates ou qualquer html:
 
-```html
+```python
+#Tem que ser a primeira linha do código
 {% load static %}
 ```
         
