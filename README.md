@@ -4,6 +4,8 @@ Meu [Facebook], [Twitter], [LinkedIn]
 
 Guia de configurações, códigos necessários e orientações seguindo o curso [Desenvolva uma aplicação com Django 2.0 e deploy no Heroku] do professor [Gregory Pacheco].
 
+<div align="center"><img src="https://github.com/hemilioaraujo/DjangoNotes/blob/master/requestResponse.png"></div>
+
 Ir para [DjangoNotes]
 
 [Desenvolva uma aplicação com Django 2.0 e deploy no Heroku]: https://www.udemy.com/share/1003joAkEddl1aQnw=/
