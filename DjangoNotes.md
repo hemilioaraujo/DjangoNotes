@@ -1,7 +1,7 @@
 PASSOS BÁSICOS DJANGO
 ==================================================
 
-### VENV
+## VENV
 
 Criar virtual enviroment:
     
@@ -31,19 +31,19 @@ cd venv/Scripts
 activate
 ```
         
-### Instalar django:
+## Instalar django:
 
 ```shell
 pip install django
 ```
 
-### Iniciar projeto:
+## Iniciar projeto:
 
 ```shell
 django-admin startproject <nome do projeto> .
 ```
 
-### Alterar configurações de settings.py:
+## Alterar configurações de settings.py:
 
 ```python
 LANGUAGE_CODE = 'pt-br'
@@ -53,13 +53,13 @@ LANGUAGE_CODE = 'pt-br'
 TIME_ZONE = 'America/Sao_Paulo'
 ```
 
-### Testar se o servidor irá rodar:
+## Testar o servidor:
 
 ```shell
 python manage.py runserver
 ```
 
-### Criar urls:
+## URLS:
     
 ```python
 path('url/<argumento>/', <função ou view>)
@@ -97,7 +97,7 @@ Podem ser passados argumentos para as views:
 path('hello/<str:nome> ', hello)
 ```
     
-### Views:
+## Views:
 
 Importar a classe HttpResponse:
 
@@ -119,7 +119,7 @@ def hello(Request, nome):
     return HttpResponse('Hello ' + str(nome) + '!')
 ```
             
-### Models:
+## Models:
 
 Antes de criar um model, deve-se criar um app onde este model será utilizado.
 
@@ -170,7 +170,7 @@ python manage.py makemigrations
 
 Toda vez que realizar alterações em um model, deve ser aplicado makemigrations.
     
-### Django Admin:
+## Django Admin:
     
 Django admin serve para gerenciamento do backend.
 
@@ -188,7 +188,7 @@ from .models import <nome do model>
 admin.site.register(<nome do model>)
 ```
 
-### Templates:
+## Templates:
     
 Criar o  diretório na raiz do projeto.
 
@@ -233,7 +233,7 @@ No arquivo .html também é possível utilizar Jinja. Exemplo:
 {% endif %}
 ``` 
     
-### Arquivos estáticos:
+## Arquivos estáticos:
 
 Adicionar o seguinte código em settings.py:
 
@@ -256,7 +256,7 @@ Adicione o link para o arquivo estático no head do arquivo html:
 <link rel="stylesheet" href="{% static 'style.css' %}">
 ```
         
-### Arquivos de media:
+## Arquivos de media:
 
 ```python
 #Adicionar o campo MEDIA_URL no arquivo settings.py, nela adicionar a variável de media.
@@ -284,3 +284,9 @@ from django.conf.urls.static import static
 
  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
  ```
+
+ [VENV]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#venv
+ [Instalar Django]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#instalar-django
+ [Iniciar projeto]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#iniciar-projeto
+ [Alterar configurações de settings.py]: https://github.com/hemilioaraujo/DjangoNotes/blob/master/DjangoNotes.md#alterar-configura%C3%A7%C3%B5es-de-settingspy
+ [Testar o servidor]: Testar se o servidor
