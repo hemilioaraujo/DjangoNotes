@@ -6,7 +6,9 @@ Guia de configurações, códigos necessários e orientações seguindo o curso 
 
 Ir para [DjangoNotes]
 
-<div align="center"><a href="www.google.com.br"><img src="https://github.com/hemilioaraujo/DjangoNotes/blob/master/img/requestResponse.png"></a></div>
+<div align="center"><img src="https://github.com/hemilioaraujo/DjangoNotes/blob/master/img/requestResponse.png"></div>
+
+[![Alt text](https://github.com/hemilioaraujo/DjangoNotes/blob/master/img/requestResponse.png)](http://www.google.com)
 
 [Desenvolva uma aplicação com Django 2.0 e deploy no Heroku]: https://www.udemy.com/share/1003joAkEddl1aQnw=/
 [Gregory Pacheco]: https://www.udemy.com/user/gpzimpacheco/
