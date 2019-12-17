@@ -36,11 +36,7 @@ ou
 Ativar venv no windows:
     
 ```shell
-cd venv/Scripts
-```
-
-```shell
-activate
+venv\Scripts\activate
 ```
         
 ## Instalar django:
