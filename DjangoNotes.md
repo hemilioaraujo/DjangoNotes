@@ -175,6 +175,18 @@ python manage.py makemigrations
 ```
 
 Toda vez que realizar alterações em um model, deve ser aplicado makemigrations.
+
+#### Tipos de ações entre relacionamentos
+
+* CASCADE: Quando o objeto referênciado é excluído, também são excluidos os objetos que tem referência a este objeto. Quando você exclui um post de um blog, você também quer excluir os comentários deste post. O equivalente em SQL é: CASCADE.
+
+* PROTECT: Proíbe a exclusão do objeto referênciado. Para excluir, você precisa remover todos os objetos que o referenciam primeiro. O equivalente em SQL é: RESTRICT.
+
+* SET_NULL: Seta a referência para NULL(o campo tem que possibilitar valor nulo). Quando você deleta um usuário, porém deseja manter os comentários que ele postou, porém diz que foi postado por um usuário anônimo ou excluído. Equivalente em SQLé: SET NULL.
+
+* SET_DEFAULT: Seta o valor default do campo. Equivalente em SQL é: SET DEFAULT.
+
+* DO_NOTHING: Provavelmente uma péssima idéia, devido isso poder criar problemas de integridade na sua base de dados (referenciar um objeto que não existe). Equivalente em SQL é: NO ACTION.
     
 ## Django Admin:
     
